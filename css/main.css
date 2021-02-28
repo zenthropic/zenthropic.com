@@ -1,0 +1,61 @@
+@import url('https://fonts.googleapis.com/css2?family=Anonymous+Pro:wght@400;700&display=swap');
+html {
+  background: url(/img/zenthropic_bg.png) no-repeat center center fixed;
+  background-size: cover;
+  font-family: 'Anonymous Pro', monospace;
+}
+
+body {
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: center;
+  height: 100vh;
+  margin: 0;
+  text-align: center;
+}
+
+header {
+  flex-grow: 3;
+  position: relative;
+}
+
+header img {
+  position: absolute;
+  width: 80%;
+  bottom: 5%;
+  left: 10%;
+}
+
+main {
+  flex-grow: 1;
+  font-family: 'Anonymous Pro', monospace;
+  font-size: 4vw;
+}
+main .code-1 { color: #20817b; }
+main .code-2 { color: #f99e23; }
+main .code-3 { color: #c3c3c3; }
+main .code-4 { color: #3cbeb3; font-weight: bold; }
+
+footer {
+  flex-grow: 1;
+  font-size: 2vw;
+}
+
+footer a, footer a:visited {
+  color: #27446a;
+}
+
+@media only screen and (max-device-width: 480px) {
+  body {
+    height: 80vh;
+  }
+
+  main {
+    font-size: 14pt;
+  }
+
+  footer {
+    font-size: 12pt;
+  }
+
+}
