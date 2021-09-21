@@ -10,6 +10,7 @@ body {
 
 header {
   position: fixed;
+  z-index: 1;
   box-sizing: border-box;
   width: 100%;
   top: 0;
@@ -69,6 +70,14 @@ main {
   margin: 80px auto;
 }
 
+main.terms {
+  counter-reset: section;
+}
+
+section {
+  counter-increment: section;
+}
+
 h1 {
   font-size: 2rem;
   font-weight: 800;
@@ -78,6 +87,10 @@ h1 {
 h2 {
   font-size: 1.4rem;
   color: #1C3557;
+}
+
+.terms h2:before {
+  content: counter(section) ". ";
 }
 
 h3 {
@@ -94,11 +107,41 @@ aside strong {
   color: #20817B;
 }
 
-ul {
+ul, ol {
   margin: 0;
 }
 
-li dfn {
+ol {
+  counter-reset: list;
+}
+
+ol.continue {
+  counter-reset: none;
+}
+
+ol > li {
+  list-style: none;
+  position: relative;
+}
+
+ol > li:before {
+  counter-increment: list;
+  content: "(" counter(list, lower-alpha) ") ";
+  position: absolute;
+  left: -2em;
+}
+
+dfn {
   font-weight: 600;
   font-style: normal;
+}
+
+span.conspicuous {
+  font-weight: 500;
+  background-color: #fddfb7;
+  padding: 3px 0;
+}
+
+a.strong {
+  font-weight: 600;
 }
