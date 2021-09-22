@@ -1,9 +1,7 @@
-@import url('https://fonts.googleapis.com/css2?family=Anonymous+Pro:wght@400;700&display=swap');
-
 html {
   background: url(/img/zenthropic_bg.png) no-repeat center center fixed;
   background-size: cover;
-  font-family: 'Anonymous Pro', monospace;
+  font-family: 'Montserrat', sans-serif;
 }
 
 body {
@@ -39,11 +37,15 @@ main .code-4 { color: #3cbeb3; font-weight: bold; }
 
 footer {
   flex-grow: 1;
-  font-size: 2vw;
+  font-size: 16pt;
 }
 
 footer a, footer a:visited {
+  text-decoration: none;
   color: #27446a;
+}
+footer a:hover {
+  text-decoration: underline;
 }
 
 @media only screen and (max-device-width: 480px) {
