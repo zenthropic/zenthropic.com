@@ -2,6 +2,14 @@
   font-family: 'Montserrat', sans-serif;
   font-size: 14pt;
   line-height: 1.5;
+
+  --color-navy: #1c3557; /* logo */
+  --color-midnight-blue: #27446a;
+  --color-teal-light: #3cbeb3; /* logo */
+  --color-teal-dark: #20817b;
+  --color-marigold: #f99e23;
+  --color-marigold-light: #fddfb7;
+  --color-bright-red: #ed1c24;
 }
 
 body {
@@ -26,7 +34,7 @@ header {
   box-shadow: 0px 0px 12px 0px black;
 }
 
-header a {
+header .logo {
   flex: 1;
 }
 
@@ -36,8 +44,23 @@ header img {
   margin: 15px 0;
 }
 
+a {
+  color: var(--color-teal-dark);
+  font-weight: 500;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+a.strong {
+  font-weight: 600;
+}
+
 nav {
-  color: #20817B;
+  color: var(--color-teal-dark);
+  font-size: 0.75rem;
 }
 
 header nav {
@@ -52,17 +75,6 @@ header nav {
   footer nav {
     display: none;
   }
-}
-
-nav a {
-  font-size: 0.75rem;
-  font-weight: 500;
-  text-decoration: none;
-  color: #20817B;
-}
-
-nav a:hover {
-  text-decoration: underline;
 }
 
 main {
@@ -81,12 +93,12 @@ section {
 h1 {
   font-size: 2rem;
   font-weight: 800;
-  color: #27446A;
+  color: var(--color-midnight-blue);
 }
 
 h2 {
   font-size: 1.4rem;
-  color: #1C3557;
+  color: var(--color-navy);
 }
 
 .terms h2:before {
@@ -95,7 +107,7 @@ h2 {
 
 h3 {
   font-size: 1rem;
-  color: #20817B;
+  color: var(--color-teal-dark);
   margin-bottom: 0.5ex;
 }
 
@@ -104,7 +116,7 @@ aside {
 }
 
 aside strong {
-  color: #20817B;
+  color: var(--color-teal-dark);
 }
 
 ul, ol {
@@ -138,10 +150,6 @@ dfn {
 
 span.conspicuous {
   font-weight: 500;
-  background-color: #fddfb7;
+  background-color: var(--color-marigold-light);
   padding: 3px 0;
-}
-
-a.strong {
-  font-weight: 600;
 }
